@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-org/spring-boot-vault-liquibase-repo.git'
+                git branch: 'main', url: 'https://github.com/StephaneSL/spring-boot-vault-liquibase-repo.git'
             }
         }
         stage('Build & Test') {
