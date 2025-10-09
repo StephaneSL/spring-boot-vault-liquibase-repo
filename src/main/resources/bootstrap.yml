@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    vault:
+      uri: http://127.0.0.1:8200
+      token: root
+      kv:
+        enabled: true
+        backend: secret
+        default-context: myapp/config
