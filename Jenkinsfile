@@ -7,12 +7,6 @@ pipeline {
         VAULT_TOKEN = "root"
     }
 
-options {
-skipDefaultCheckout(true)
-parallelsAlwaysFailFast()
-disableConcurrentBuilds()
-buildDiscarder(logRotator(numToKeepStr: ‘20’, artifactNumToKeepStr: ‘20’))
-}
     stages {
         stage('Checkout') {
             steps {
