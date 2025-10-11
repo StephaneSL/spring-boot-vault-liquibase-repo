@@ -27,4 +27,5 @@ class PersonControllerTest {
         mockMvc.perform(get("/api/people").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
+
 }
