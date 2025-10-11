@@ -20,7 +20,7 @@ pipeline {
                     }
                     steps {
                         git(
-                            url: "https://github.com/StephaneSL/spring-boot-vault-liquibase-repo.git",
+                            url: 'https://github.com/StephaneSL/spring-boot-vault-liquibase-repo.git',
                             credentialsId: 'github-token',
                             branch: 'main'
                         )
