@@ -14,7 +14,7 @@ pipeline {
     //       }
     //   }
     stages {
-        stage('Checkout from GitHub') {
+        stage('Checkout') {
                     environment {
                         GITHUB_TOKEN = credentials('github-token')
                     }
