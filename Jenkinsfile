@@ -7,11 +7,24 @@ pipeline {
         VAULT_TOKEN = "root"
     }
 
+    //stages {
+    //    stage('Checkout') {
+    //        steps {
+    //            git branch: 'main', url: 'https://github.com/StephaneSL/spring-boot-vault-liquibase-repo.git'
+    //       }
+    //   }
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/StephaneSL/spring-boot-vault-liquibase-repo.git'
-            }
+        stage('Checkout from GitHub') {
+                    environment {
+                        GITHUB_TOKEN = credentials('github-token')
+                    }
+                    steps {
+                        git(
+                            url: "https://github.com/StephaneSL/spring-boot-vault-liquibase-repo.git",
+                            credentialsId: 'github-token',
+                            branch: 'main'
+                        )
+                    }
         }
         stage('Build & Test') {
             steps {
