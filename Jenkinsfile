@@ -15,13 +15,13 @@ pipeline {
     //   }
     stages {
         stage('Checkout') {
-                    environment {
-                        GITHUB_TOKEN = credentials('github-token')
-                    }
+                    //environment {
+                       // GITHUB_TOKEN = credentials('github-token')
+                    //}
                     steps {
                         git(
                             url: 'https://github.com/StephaneSL/spring-boot-vault-liquibase-repo.git',
-                            credentialsId: 'github-token',
+                            credentialsId: 'github-token1',
                             branch: 'main'
                         )
                     }
