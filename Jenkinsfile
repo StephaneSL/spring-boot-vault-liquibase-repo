@@ -7,6 +7,10 @@ pipeline {
         VAULT_TOKEN = "root"
     }
 
+    tools {
+            maven 'Maven_3.9.11'
+    }
+
     stages {
         stage('Checkout') {
               steps {
