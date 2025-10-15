@@ -43,7 +43,7 @@ services:
       VAULT_ADDR: http://vault:8200
       VAULT_TOKEN: root
     ports:
-      - "8080:8080"
+      - "8180:8080"
     restart: on-failure
 
 volumes:
