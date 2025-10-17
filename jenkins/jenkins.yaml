@@ -1,0 +1,14 @@
+jenkins:
+  systemMessage: "Jenkins configured by JCasC - demo instance"
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "admin"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+unclassified:
+  location:
+    url: "http://localhost:9090/"
