@@ -3,4 +3,3 @@ workflow-aggregator:latest
 configuration-as-code:latest
 credentials:latest
 warnings-ng:latest
-owasp-dependency-check:latest
