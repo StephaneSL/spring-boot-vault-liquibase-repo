@@ -1,11 +1,9 @@
 FROM jenkins/jenkins:lts
 
 USER root
-RUN apt-get update && apt-get install -y curl unzip
+RUN apt-get update && apt-get install -y curl unzip && curl -fsSL https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.13.2/jenkins-plugin-manager-2.13.2.jar -o /usr/lib/jenkins-plugin-manager.jar && chmod 755 /usr/lib/jenkins-plugin-manager.jar
 
 USER jenkins
-
-# Copy your plugins list
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 
 # Use the plugin installation manager tool
