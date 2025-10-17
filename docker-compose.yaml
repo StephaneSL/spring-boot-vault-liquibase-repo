@@ -61,7 +61,7 @@ services:
     environment:
       JENKINS_OPTS: --prefix=/
       JAVA_OPTS: "-Djenkins.install.runSetupWizard=false"
-      GITHUB_REPO_URL: "https://github.com/myrepossl/spring-boot-vault-liquibase-repo.git"
+      GITHUB_REPO_URL: "https://github.com/StephaneSL/spring-boot-vault-liquibase-repo.git"
     ports:
       - "9090:8080"
       - "50000:50000"
