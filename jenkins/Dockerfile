@@ -9,6 +9,4 @@ USER jenkins
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 
 # Use the plugin installation manager tool
-RUN java -jar /usr/lib/jenkins-plugin-manager.jar \
-    --plugin-file /usr/share/jenkins/ref/plugins.txt \
-    --plugin-download-directory /usr/share/jenkins/ref/plugins
+RUN java -jar /usr/lib/jenkins-plugin-manager.jar --plugin-file /usr/share/jenkins/ref/plugins.txt --plugin-download-directory /usr/share/jenkins/ref/plugins
