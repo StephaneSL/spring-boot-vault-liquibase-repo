@@ -21,7 +21,8 @@ services:
     container_name: vault-server
     environment:
       VAULT_DEV_ROOT_TOKEN_ID: root
-      VAULT_DEV_LISTEN_ADDRESS: "0.0.0.0:8200"
+      VAULT_ADDR: http://0.0.0.0:8200
+      command: "vault server -dev -dev-listen-address=0.0.0.0:8200"
     ports:
       - "8200:8200"
     cap_add:
@@ -44,8 +45,7 @@ services:
       vault:
         condition: service_healthy
     environment:
-      SPRING_PROFILES_ACTIVE: docker
-      VAULT_ADDR: http://127.0.0.1:8200
+      VAULT_ADDR: http://vault-server:8200
       VAULT_TOKEN: root
     ports:
       - "8080:8080"
