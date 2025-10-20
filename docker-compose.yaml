@@ -45,7 +45,7 @@ services:
         condition: service_healthy
     environment:
       SPRING_PROFILES_ACTIVE: docker
-      VAULT_ADDR: http://vault:8200
+      VAULT_ADDR: http://127.0.0.1:8200
       VAULT_TOKEN: root
     ports:
       - "8080:8080"
