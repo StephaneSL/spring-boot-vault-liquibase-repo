@@ -29,10 +29,8 @@ services:
       - IPC_LOCK
     command: server -dev
     healthcheck:
+      disable: true
       test: ["CMD-SHELL", "curl -sS --fail http://127.0.0.1:8200/v1/sys/health || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
   app:
     build:
