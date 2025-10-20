@@ -25,9 +25,6 @@ services:
       command: "vault server -dev -dev-listen-address=0.0.0.0:8200"
     ports:
       - "8200:8200"
-    cap_add:
-      - IPC_LOCK
-    command: server -dev
     healthcheck:
       disable: true
       test: ["CMD-SHELL", "curl -sS --fail http://127.0.0.1:8200/v1/sys/health || exit 1"]
