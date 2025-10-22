@@ -10,4 +10,4 @@ spring:
     user: ${db_username}
     password: ${db_password}
     change-log: classpath:/db/changelog/db.changelog-master.yaml
-    enabled: true
+    enabled: false
