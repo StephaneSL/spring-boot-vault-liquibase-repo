@@ -18,7 +18,7 @@ import org.springframework.http.MediaType;
 import com.example.vaultliquibasedemo.model.Person;
 import com.example.vaultliquibasedemo.repository.PersonRepository;
 import org.junit.jupiter.api.Test;
-
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 @SpringBootTest
@@ -47,8 +47,8 @@ class PersonControllerTest {
     @Test
     void testSaveAndFind() {
         Person p = new Person(); p.setName("Bob");
-        Person saved = repo.save(p);
-        assertThat(repo.findById(saved.getId())).isPresent();
+        Person saved = personRepository.save(p);
+        assertThat(personRepository.findById(saved.getId())).isPresent();
     }
 
     @Test
