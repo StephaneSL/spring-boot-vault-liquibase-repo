@@ -30,7 +30,6 @@ class PersonControllerTest {
     public static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:15")
             .withDatabaseName("appdb").withUsername("postgres").withPassword("postgres");
 
-
     @DynamicPropertySource
     static void properties(DynamicPropertyRegistry registry) {
         registry.add("spring.datasource.url", postgres::getJdbcUrl);
