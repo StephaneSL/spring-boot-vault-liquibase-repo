@@ -55,6 +55,7 @@ class PersonControllerTest {
         personRepository.save(new Person("Test"));
         mockMvc.perform(get("/api/persons").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
+
     }
 
 }
