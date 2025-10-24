@@ -27,8 +27,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 class PersonControllerTest {
 
     @Container
-    public static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:15")
-            .withDatabaseName("appdb").withUsername("postgres").withPassword("postgres");
+    public static PostgreSQLContainer<?> postgres;
+
+    static {
+        postgres = new PostgreSQLContainer<>("postgres:15")
+                .withDatabaseName("appdb").withUsername("postgres").withPassword("postgres");
+    }
 
     @DynamicPropertySource
     static void properties(DynamicPropertyRegistry registry) {
