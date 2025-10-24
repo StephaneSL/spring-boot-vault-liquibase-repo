@@ -3,6 +3,8 @@ services:
     image: postgres:15
     container_name: postgres-db
     environment:
+      db_username: postgres
+      db_password: postgres
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: appdb
